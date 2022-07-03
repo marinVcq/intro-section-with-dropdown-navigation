@@ -49,15 +49,22 @@
 				padding: 0
 				font-size: 1.6rem
 
-				img
+				.icon-arrow
 					margin-left: 1.6rem
+				.up
+					content: url("../assets/images/icon-arrow-up.svg")
+				.down
+					content: url("../assets/images/icon-arrow-down.svg")
 
 			.dropdown-content
 				margin-left: 2.5rem
 				text-align: start
+				opacity: 0
 				display: none
+				transition: all 0.5s linear
 
 			.visible
+				opacity: 1
 				display: block
 
 				.dropdown-item
