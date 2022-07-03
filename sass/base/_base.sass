@@ -1,0 +1,47 @@
+@import ../base/_mixins.sass
+
+/* Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap')
+
+/* Color palette */
+$almost-white: hsl(0, 0%, 98%)
+$medium-gray: hsl(0, 0%, 41%)
+$almost-black: hsl(0, 0%, 8%)
+$white: hsl(0, 0%, 100%)
+
+/* General */
+
+*
+	box-sizing: border-box
+	position: relative
+	cursor: default
+	margin: 0
+
+html
+	@include width-height(100vw, 100vh)
+	position: relative
+	margin: 0
+	padding: 0
+	font-size: 62.5%
+
+body
+	width: 100vw
+	@include flexbox(column, flex-start, center)
+	margin: 0
+	padding: 0
+	font-family: "Epilogue"
+	font-weight: 500
+	font-size: 1.8rem
+	scroll-behavior: smooth
+	overflow-x: hidden
+	background-color: $almost-white
+	background-attachment: fixed
+
+a
+	cursor: pointer
+	text-decoration: none
+
+@include respond(desktop)
+	body
+		height: 100vh
+
