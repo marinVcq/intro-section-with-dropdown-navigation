@@ -1,24 +1,22 @@
 @import base/_base.sass
 
 .nav-container
-	z-index: 2
+	@include width-height(100%, 7.5rem)
+	@include flexbox(row, space-between, center)
 	background-color: $almost-white
 	padding: 0 1.7rem 0 1.7rem
-	@include flexbox(row, space-between, center)
-	@include width-height(100%, 7.5rem)
+	z-index: 2
 
 	.checkbox
-		z-index: 3
-		width: 5.2rem
-		height: 5.2rem
-		background: transparent
-		opacity: 0.2
+		@include width-height(5.2rem, 5.2rem)
 		@include set-position(absolute, 1.15rem, undefined, 0.7rem)
+		opacity: 0
+		z-index: 3
 
 		&:checked
 			position: fixed
 
-		&:checked ~ .mobile-container, &:checked ~ .mobile-bg
+		&:checked ~ .mobile-container, &:checked ~ .mobile-background
 			opacity: 1
 			transform: none
 
@@ -26,29 +24,55 @@
 			@include set-position(fixed,2.5rem,undefined,1.7rem)
 			content: url('../assets/images/icon-close-menu.svg')
 
-	.mobile-bg
-		background-color: rgba($almost-black,0.8)
+	.mobile-background
 		@include set-position(fixed, 0,0)
 		@include width-height(100%,100%)
-		opacity: 0
+		background-color: rgba($almost-black,0.8)
 		transition: opacity 0.4s linear
+		opacity: 0
 
 	.mobile-container
-		background-color: $almost-white
 		@include set-position(fixed, 0,undefined,0)
-		@include width-height(24rem,100vh)
-		transform: translateX(+25rem)
+		@include width-height(24rem,100%)
+		background-color: $almost-white
+		transform: translateX(24rem)
 		transition: transform 0.3s ease
+		overflow: scroll
 
 		.items-container
 			margin: 8.3rem 0 0 2.5rem
 			@include flexbox(column, center, flex-start)
 
-			.nav-link
+			.dropdown-btn
+				background: transparent
+				border: none
+				padding: 0
+				font-size: 1.6rem
+
+				img
+					margin-left: 1.6rem
+
+			.dropdown-content
+				margin-left: 2.5rem
+				text-align: start
+				display: none
+
+			.visible
+				display: block
+
+				.dropdown-item
+					@include flexbox(row-reverse, flex-end, center)
+					margin-bottom: 3rem
+
+					img 
+						margin-right: 1.6rem
+
+			.nav-link, .dropdown-btn
 				margin-bottom: 3rem
 				font-size: 1.6rem
-		a
-			color: $medium-gray
+				color: $medium-gray
+				font-weight: 500
+				font-family: "Epilogue"
 
 		.log-container
 			@include flexbox(column, center, center)
@@ -102,10 +126,15 @@
 		img 
 			width: 15%
 
-    .attribution
-    	font-size: 11px
-    	text-align: center
+footer
 
-    	a
-    		color: hsl(228, 45%, 44%)
+	@include set-position(absolute, 100hv)
+	.attribution
+		font-size: 1.1rem
+		text-align: center
+		padding: 1.5rem 0 1.5rem 0
+
+		a
+			font-size: 1.1rem
+
 

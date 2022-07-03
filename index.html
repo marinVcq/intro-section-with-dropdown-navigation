@@ -23,14 +23,34 @@
     <input type="checkbox" class="checkbox">
 
     <!-- mobile background -->
-    <div class="mobile-bg"></div>
+    <div class="mobile-background"></div>
 
     <!-- Mobile container -->
     <div class="mobile-container">
 
       <div class="items-container">
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Company</a>
+
+        <!-- First dropdown -->
+        <div class="dropdown">
+          <button class="dropdown-btn">Features<img src="assets/images/icon-arrow-down.svg" class="icon-arrow" alt="icon-arrow-svg"></button>
+          <div class="dropdown-content">
+            <a href="#" class="dropdown-item">Todo List<img src="assets/images/icon-todo.svg" class="dropdown-item-image" alt="dropdown-image-svg"></a>
+            <a href="#" class="dropdown-item">Calendar<img src="assets/images/icon-calendar.svg" class="dropdown-item-image" alt="dropdown-image-svg"></a>
+            <a href="#" class="dropdown-item">Reminders<img src="assets/images/icon-reminders.svg" class="dropdown-item-image" alt="dropdown-image-svg"></a>
+            <a href="#" class="dropdown-item">Planning<img src="assets/images/icon-planning.svg" class="dropdown-item-image" alt="dropdown-image-svg"></a>
+          </div>
+        </div>
+
+        <!-- Second dropdown -->
+        <div class="dropdown">
+          <button class="dropdown-btn">Company<img src="assets/images/icon-arrow-down.svg" class="icon-arrow" alt="icon-arrow-svg"></button>
+          <div class="dropdown-content">
+            <a href="#" class="dropdown-item">History</a>
+            <a href="#" class="dropdown-item">Our Team</a>
+            <a href="#" class="dropdown-item">Blog</a>
+          </div>
+        </div>
+
         <a class="nav-link" href="#">Careers</a>
         <a class="nav-link" href="#">About</a>
       </div>
@@ -74,10 +94,38 @@
       <img src="assets/images/client-meet.svg" alt="databiz-logo-svg">
       <img src="assets/images/client-maker.svg" alt="databiz-logo-svg">
     </div>
-
-    <!-- attribution -->
-    
-
   </main>
+
+  <!-- Footer attribution -->
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/marinVcq?tab=repositories">Marinos</a>.
+    </p>
+  </footer>
+
+  <script type="text/javascript">
+    
+    var dropdownButton = document.getElementsByClassName('dropdown-btn');
+    var dropContent = document.getElementsByClassName('dropdown-content');
+
+    for(let i = 0; i<dropdownButton.length; i++){
+      dropdownButton[i].addEventListener('click', function(){
+        console.log("get a click");
+
+        let content = dropContent[i];
+
+        console.log(content);
+
+        if(content.classList.contains('visible')){
+          content.classList.remove('visible');
+          console.log("set visible");
+        }else{
+          content.classList.add('visible');
+
+        }
+      });
+    }
+  </script>
 </body>
 </html>

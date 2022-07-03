@@ -34,7 +34,9 @@ body {
 
 a {
   cursor: pointer;
-  text-decoration: none; }
+  text-decoration: none;
+  color: dimgray;
+  font-size: 1.6rem; }
 
 @media only screen and (min-width: 1440px) {
   body {
