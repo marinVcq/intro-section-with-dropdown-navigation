@@ -10,7 +10,6 @@
 			@include width-height(100%, 28.2rem)
 
 	.text-container
-
 		@include flexbox(column, center,center)
  
 		#main-title
@@ -69,7 +68,6 @@
 					width: 36rem
 
 		.text-container
-
 			@include flexbox(column, center,flex-start)
 			width: 52rem
 			padding-top: 10rem
@@ -88,8 +86,6 @@
 					font-size: 5rem
 					height: 10rem
 					line-height: 4rem
-
-				
 
 			#main-description
 				margin: 5rem 0 6rem 0
@@ -119,10 +115,9 @@
 					transition: 0.3s ease
 
 			.partners-container
-				margin-top: 11rem
-				width: 100%
-				height: 100%
+				@include width-height(100%, 100%)
 				@include flexbox(row,space-between,center)
+				margin-top: 11rem
 
 				img 
 					width: 15%

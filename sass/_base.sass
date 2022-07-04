@@ -41,3 +41,29 @@ a
 	text-decoration: none
 	color: $medium-gray
 	font-size: 1.6rem
+
+.nav-link, .dropdown-btn
+	cursor: pointer
+	margin-bottom: 3rem
+	font-size: 1.6rem
+	color: $medium-gray
+	font-weight: 500
+	font-family: "Epilogue"
+
+	&:hover
+		color: $almost-black
+
+	@include respond(desktop)
+		margin: 0 4rem 0 0
+
+.nav-btn
+	font-size: 1.5rem
+	margin-bottom: 1.6rem
+
+	&:hover
+		cursor: pointer
+		color: $almost-black
+
+
+.hover:hover
+	color: $almost-black
