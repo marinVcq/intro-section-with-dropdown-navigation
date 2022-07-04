@@ -7,7 +7,7 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
 - [Status](#website-status)
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshot](#screenshot-of-my-solution)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -28,9 +28,11 @@ Users should be able to:
 - View the optimal layout for the content depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-### Screenshot
+### Screenshot of my solution
 
-![](./screenshot.jpg)
+![1440*900](./screenshots/desktop-activate.png)
+![Iphone XR resolution](./screenshots/mobile.png)
+
 
 ### Links
 
@@ -48,10 +50,10 @@ Users should be able to:
 
 ### Note
 
-_style.sass is the main SASS file (only @import)
-_base.sass contain variable and general CSS
-_components.sass contain CSS style of Reusable components like button, nav-link, etc...
-Layout file contain all container and flexbox layout.
+- _style.sass is the main SASS file (only @import)
+- _base.sass contain variable and general CSS
+- _components.sass contain CSS style of Reusable components like button, nav-link, etc...
+- Layout file contain all container and flexbox layout.
 
 
 ### Useful resources
