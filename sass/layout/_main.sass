@@ -6,8 +6,13 @@
 	@include width-height(100%, 100%)
 
 	.image-container
-		img
-			@include width-height(100%, 28.2rem)
+		@include width-height(100%, 28.2rem)
+		min-width: 28.2rem
+		min-height: 100%
+		background-image: url("../assets/images/image-hero-mobile.png")
+		background-position: center
+		background-size: contain
+		background-repeat: no-repeat
 
 	.text-container
 		@include flexbox(column, center,center)
@@ -59,10 +64,9 @@
 			padding: 0 26rem 0 33rem
 
 		.image-container
-			img
-				width: 48rem
-				height: 100%
-				content: url("../assets/images/image-hero-desktop.png")
+				@include width-height(48rem, 64rem)
+				min-width: 36rem
+				background-image: url("../assets/images/image-hero-desktop.png")
 
 				@include respond(medium-desktop)
 					width: 36rem
