@@ -1,4 +1,4 @@
-@import ../base/_mixins.sass
+@import _mixins.sass
 
 /* Fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap')
@@ -26,7 +26,6 @@ html
 
 body
 	width: 100vw
-	@include flexbox(column, flex-start, center)
 	margin: 0
 	padding: 0
 	font-family: "Epilogue"
@@ -42,8 +41,3 @@ a
 	text-decoration: none
 	color: $medium-gray
 	font-size: 1.6rem
-
-@include respond(desktop)
-	body
-		height: 100vh
-

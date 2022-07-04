@@ -16,8 +16,6 @@ for(let i = 0; i<dropdownButton.length; i++){
       content.classList.add('visible');
       arr.classList.remove('down');
       arr.classList.add('up');
-
-
     }
   });
 }

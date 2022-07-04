@@ -3,26 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- Navigation -->
   <nav class="nav-container">
 
     <!-- logo -->
-    <img src="assets/images/logo.svg" alt="logo-svg" id="logo">
+    <div class="logo-container">
+      <img src="assets/images/logo.svg" alt="logo-svg" id="logo">
+    </div>
+    
 
-    <!-- Ckeckbox Toggle button -->
+    <!-- Toggle button -->
     <input type="checkbox" class="checkbox">
 
-    <!-- mobile background -->
+    <!-- Mobile background -->
     <div class="mobile-background"></div>
 
     <!-- Mobile container -->
@@ -33,7 +32,7 @@
         <!-- First dropdown -->
         <div class="dropdown">
           <button class="dropdown-btn">Features<img src="assets/images/icon-arrow-down.svg" class="icon-arrow" alt="icon-arrow-svg"></button>
-          <div class="dropdown-content">
+          <div class="dropdown-content" id="dropdown-1">
             <a href="#" class="dropdown-item">Todo List<img src="assets/images/icon-todo.svg" class="dropdown-item-image" alt="dropdown-image-svg"></a>
             <a href="#" class="dropdown-item">Calendar<img src="assets/images/icon-calendar.svg" class="dropdown-item-image" alt="dropdown-image-svg"></a>
             <a href="#" class="dropdown-item">Reminders<img src="assets/images/icon-reminders.svg" class="dropdown-item-image" alt="dropdown-image-svg"></a>
@@ -44,7 +43,7 @@
         <!-- Second dropdown -->
         <div class="dropdown">
           <button class="dropdown-btn">Company<img src="assets/images/icon-arrow-down.svg" class="icon-arrow" alt="icon-arrow-svg"></button>
-          <div class="dropdown-content">
+          <div class="dropdown-content" id="dropdown-2">
             <a href="#" class="dropdown-item">History</a>
             <a href="#" class="dropdown-item">Our Team</a>
             <a href="#" class="dropdown-item">Blog</a>
@@ -53,50 +52,63 @@
 
         <a class="nav-link" href="#">Careers</a>
         <a class="nav-link" href="#">About</a>
+
+        <!-- End items -->
       </div>
 
+      <!-- Sign up or login -->
       <div class="log-container">
         <a href="#" id="login-btn">Login</a>
         <a href="#" id="register-btn">Register</a>
       </div>
 
+      <!-- End mobile container -->
     </div>
 
-    <!-- Burger image (behind the checkbox button) -->
+    <!-- Menu icon image (behind the checkbox button) -->
     <img src="assets/images/icon-menu.svg" alt="icon-menu-svg" id="icon-menu">
 
     <!-- End nav -->
   </nav>
 
-  <!-- Header image -->
-  <header class="image-container">
-    <img src="assets/images/image-hero-mobile.png" id="hero-image" alt="hero-image-svg">
-  </header>
-
-  <!-- Main content container -->
+  <!-- Main container -->
   <main class="main-container">
 
-    <!-- Main title -->
-    <h1 id="main-title">Make remote work</h1>
+    <!-- Hero image -->
+    <header class="image-container">
+      <img src="assets/images/image-hero-mobile.png" id="hero-image" alt="hero-image-svg">
+    </header>
 
-    <!-- Main description -->
-    <p id="main-description">
-      Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.
-    </p>
+    <!-- Text content -->
+    <section class="text-container">
 
-    <!-- Learn more button -->
-    <a href="#" id="learn-more">Learn more</a>
+      <!-- Main title -->
+      <h1 id="main-title">Make remote work</h1>
 
-    <!-- Partners container -->
-    <div class="partners-container">
-      <img src="assets/images/client-databiz.svg" alt="databiz-logo-svg">
-      <img src="assets/images/client-audiophile.svg" alt="databiz-logo-svg">
-      <img src="assets/images/client-meet.svg" alt="databiz-logo-svg">
-      <img src="assets/images/client-maker.svg" alt="databiz-logo-svg">
-    </div>
+      <!-- Main description -->
+      <p id="main-description">
+        Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.
+      </p>
+
+      <!-- Learn more button -->
+      <a href="#" id="learn-more" class="button">Learn more</a>
+
+      <!-- Partners container -->
+      <div class="partners-container">
+        <img src="assets/images/client-databiz.svg" alt="databiz-logo-svg">
+        <img src="assets/images/client-audiophile.svg" alt="databiz-logo-svg">
+        <img src="assets/images/client-meet.svg" alt="databiz-logo-svg">
+        <img src="assets/images/client-maker.svg" alt="databiz-logo-svg">
+      </div>
+      
+      <!-- End Text content -->
+    </section>
+    
+    <!-- End main container -->
   </main>
 
-  <!-- Footer attribution -->
+
+  <!-- Footer -->
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
@@ -104,6 +116,7 @@
     </p>
   </footer>
 
+  <!-- Main JS script -->
   <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

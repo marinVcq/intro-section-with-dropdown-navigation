@@ -1,0 +1,128 @@
+@import ../_base.sass
+
+.main-container
+
+	@include flexbox(column, center,center)
+	@include width-height(100%, 100%)
+
+	.image-container
+		img
+			@include width-height(100%, 28.2rem)
+
+	.text-container
+
+		@include flexbox(column, center,center)
+ 
+		#main-title
+			font-size: 3.6rem
+			margin-top: 5rem
+
+		#main-description
+			@include width-height(89%,6.8rem)
+			text-align: center
+			margin: 3rem 0 3rem 0
+			font-size: 1.6rem
+			line-height: 2.6rem
+			color: $medium-gray
+
+			@include respond(mobile-small-width)
+				font-size: 1.4rem
+
+		#learn-more
+			@include flexbox(row,center,center)
+			@include width-height(13.6rem, 4.8rem)
+			border-radius: 1.5rem
+			background-color: $almost-black
+			color: $almost-white
+			font-size: 1.6rem
+
+		.partners-container
+			margin-top: 5rem
+			width: 100%
+			@include flexbox(row,space-around,center)
+
+			img 
+				width: 15%
+
+/* Media queries */
+
+@include respond(desktop)
+
+	.main-container
+
+		@include flexbox(row-reverse, space-between, center)
+		padding: 0 13rem 0 16.5rem
+
+		@include respond(medium-desktop)
+			padding: 0 7.5rem 0 8.25rem
+
+		@include respond(big-desktop)
+			padding: 0 26rem 0 33rem
+
+		.image-container
+			img
+				width: 48rem
+				height: 100%
+				content: url("../assets/images/image-hero-desktop.png")
+
+				@include respond(medium-desktop)
+					width: 36rem
+
+		.text-container
+
+			@include flexbox(column, center,flex-start)
+			width: 52rem
+			padding-top: 10rem
+			color: $almost-black
+
+			@include respond(medium-desktop)
+				margin-left: 5rem
+
+			#main-title
+				font-size: 7.8rem
+				margin-top: 0
+				height: 15rem
+				line-height: 8rem
+
+				@include respond(medium-desktop)
+					font-size: 5rem
+					height: 10rem
+					line-height: 4rem
+
+				
+
+			#main-description
+				margin: 5rem 0 6rem 0
+				text-align: start
+				@include width-height(44rem,7.5rem)
+				font-size: 1.8rem
+				line-height: 2.8rem
+				color: $medium-gray
+
+				@include respond(mobile-small-width)
+					font-size: 1.4rem
+
+				@include respond(medium-desktop)
+					font-size: 1.6rem
+					line-height: 2rem
+
+			#learn-more
+				@include width-height(16.3rem, 5.6rem)
+				border-radius: 1.4rem
+				font-size: 1.8rem
+
+				&:hover
+					background: transparent
+					color: $almost-black
+					border: 0.2rem solid $almost-black
+					cursor: pointer
+					transition: 0.3s ease
+
+			.partners-container
+				margin-top: 11rem
+				width: 100%
+				height: 100%
+				@include flexbox(row,space-between,center)
+
+				img 
+					width: 15%

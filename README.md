@@ -11,6 +11,7 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Note](#note)
   - [Useful resources](#useful-resources)
 
 ## Website status
@@ -45,9 +46,18 @@ Users should be able to:
 - Mobile-first workflow
 - SASS
 
+### Note
+
+_style.sass is the main SASS file (only @import)
+_base.sass contain variable and general CSS
+_components.sass contain CSS style of Reusable components like button, nav-link, etc...
+Layout file contain all container and flexbox layout.
+
+
 ### Useful resources
 
 - [Dropdown CSS](https://www.w3schools.com/css/css_dropdowns.asp) - Create a hoverable dropdown with CSS.
+- [SASS structure](https://itnext.io/structuring-your-sass-projects-c8d41fa55ed4) - Structuring your SASS Project
 
 ## Front-end Style Guide
 
