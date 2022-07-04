@@ -1,1 +1,9 @@
 @import _base.sass
+
+
+.overlay-background
+	@include set-position(fixed, 0,0)
+	@include width-height(100%,100%)
+	background-color: rgba($almost-black,0.8)
+	transition: opacity 0.4s linear
+	opacity: 0

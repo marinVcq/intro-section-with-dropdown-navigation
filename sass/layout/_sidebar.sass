@@ -21,21 +21,13 @@
 		&:checked
 			position: fixed
 
-		&:checked ~ .mobile-container, &:checked ~ .mobile-background
+		&:checked ~ .mobile-container, &:checked ~ .overlay-background
 			opacity: 1
 			transform: none
 
 		&:checked ~ #icon-menu
 			@include set-position(fixed,2.5rem,undefined,1.7rem)
 			content: url('../assets/images/icon-close-menu.svg')
-
-	.mobile-background
-		display: none
-		@include set-position(fixed, 0,0)
-		@include width-height(100%,100%)
-		background-color: rgba($almost-black,0.8)
-		transition: opacity 0.4s linear
-		opacity: 0
 
 	.mobile-container
 		@include set-position(fixed, 0,undefined,0)
@@ -108,7 +100,7 @@
 		/*background-color: rgba(240,0,0,0.2)*/
 
 
-		.checkbox, .mobile-background, #icon-menu
+		.checkbox, #icon-menu
 			display: none
 
 		.mobile-container
